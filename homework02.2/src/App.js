@@ -25,11 +25,9 @@ export default class App extends Component {
     const { contacts } = this.state;
     const names = contacts.map((element) => element.name);
     if (names.includes(contact.name)) {
-      alert(`${contact.name} is already in contact list`);
-    } else {
-      this.setState({
-        contacts: [...this.state.contacts, contact],
-      });
+      alert(`This name is already in contact list`);
+    } else if (contact.name.length > 2 && contact.number.length > 5) {
+      this.setState({ contacts: [...this.state.contacts, contact] });
     }
   };
 

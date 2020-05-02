@@ -26,7 +26,6 @@ class Phonebook extends Component {
       number: number,
     };
     this.props.addContact(contact);
-
     this.reset();
   };
 
